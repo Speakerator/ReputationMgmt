@@ -1,0 +1,142 @@
+\documentclass[a4paper,oneside,12pt]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{xargs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+%\usepackage[nonumberlist,acronym,toc,nopostdot]{glossaries}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
+
+usepackage{geometry}
+\geometry{verbose,a4paper,tmargin=20mm,bmargin=20mm,lmargin=35mm,rmargin=25mm}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+\usepackage{ifthen}
+\let\oldcite= \cite
+\renewcommand \cite[1]{\ifthenelse{\equal{#1}{NEEDED}}{[citation~needed]}{\oldcite{#1}}}
+
+\title{Messung und Management der Reputation von Servicefirmen: Ansätze und offene Fragen}
+\author{Christoph Heidrich}
+
+\begin{document}
+\begin{flushright}
+\includegraphics[width=0.3\textwidth]{TUI.png}\\[1cm]   
+\end{flushright}
+\vspace*{1cm}
+
+%Oberer Textblock
+\begin{center}
+\thispagestyle{empty}
+\large{Technische Universität Ilmenau}\\
+\vspace{0.5 cm}
+\Large{Hauptseminar}\\
+\vspace{0.5 cm}
+\Huge{\textbf{Messung und Management der Reputation von Servicefirmen: Ansätze und offene Fragen}}\\
+\vspace{1 cm}
+\large{Studiengang Wirtschaftsinformatik}\\
+\normalsize{Fachgebiet Wirtschaftsinformatik für Dienstleistungen}\\
+\end{center}
+\vspace{2cm}
+
+\begin{tabular}{lcl}
+   Themensteller: && Prof. Dr. Volker Nissen \\ 
+   Betreuer: && Prof. Dr. Volker Nissen \\ 
+   vorgelegt von: && Herr Christoph Heidrich \\ 
+    && Albert-Pulvers--Str. 7 \\ 
+    && 98693 Ilmenau \\
+    && 017670 861741 \\
+    && christoph.heidrich@tu-ilmenau.de \\
+    Matrikelnummer && 54754 \\
+    Bearbeitungszeitraum:&&   21.10.2015 -- 07.12.2015\\
+    Abgabetermin: && 07.12.2015 \\
+ \end{tabular}
+ 
+\chapter*{Abstract}
+Hier max. eine Viertelseite Abstract einfügen.
+\enlargethispage{\baselineskip}
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+\newpage
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\listoftables
+\newpage
+%% Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\begin{tabular}{lcl}
+BAPI && Business Application Programming Interface\\
+SUP && Sybase Unwired Platform\\
+VM && Virtuelle Maschine\\
+\end{tabular}
+
+\chapter{Einführung}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Problemstellung}
+Worum geht es --> siehe Einleitungen diverser Quellen. Vorteile einer positiven Reputation \textit{für Beratungsunternehmen} bereits hier anreißen.
+Reputation, Image, Vielzahl wissenschaftlicher Veröffentlichungen in diesem Bereich über die letzten Jahre. Diese beschäftigen sich jedoch sehr allgemein oder mit einem Fokus auf Branchen materieller Güter, im Bereich der Professional Service Firms jedoch vernachlässigt wurde.
+\section{Zielsetung und Forschungsansatz}
+Forschungsfrage definieren sowie Forschungsmethodik vorstellen und \textit{begründen}.
+Diese Arbeit soll daher Potenzial und Möglichkeiten aufzeigen, wie die Reputation von Beratungsfirmen gezielt, gemanaged, beeinflusst und verbessert werden kann. Dies wird anhand von .... 
+\section{Aufbau der Arbeit}
+
+\chapter{Reputation}
+\section{Definition}
+\section{Image vs. Reputation}
+\section{Vorteile positiver Reputation f. Professional Service Firms}
+\chapter{Messung von Reputation}
+\section{Kapiteleinführung}
+Was man nicht messen kann, kann man nicht managen! :)
+\section{Forbes AMAC / GMAC}
+Kuru anreißen, was das ist, wie es funktioniert und warum es nichts taugt. Nicht zu langwierig.
+\section{Reputationsmodell nach Schwaiger}
+
+\chapter{Reputationsmanagement}
+\section{Maßnahmen}
+Ab hier in jeder Sektion begründet herausarbeiten, wie basierend auf den Eigenschaften von UN-Beratungen gezielt Maßnahmen für das Rep. Mgmtm. getroffen werden können und wo sich Ansatzpunkte spez. in Prof. Service Firms finden.
+\chapter{Zusammenfassung}
+Erreichtes zusammenfassen und kritisch betrachten. Defizite, Schwachstellen und Grenzen aufzeigen sowie den Fortschritt gegenüber dem Aktuellen stand der Forschung hervorheben.
+\chapter{Ausblick}
+Zukünftige Entwicklung, offene Punkte und Forschungsthemen
+
+%%%%%%%Ehrenwörtliche Erklärung%%%%%%%%%%
+\chapter*{Ehrenwörtliche Erklärung}
+\addcontentsline{toc}{chapter}{Ehrenwörtliche Erklärung}
+\hspace*{0.5cm}
+
+\begin{normalsize}
+Ich versichere an Eides statt durch meine Unterschrift, dass ich die vorstehende Arbeit selbständig und ohne fremde Hilfe angefertigt und alle Stellen, die ich wörtlich oder annähernd wörtlich aus Veröffentlichungen entnommen habe, als solche kenntlich gemacht habe, mich auch keiner anderen als der angegebenen Literatur oder sonstiger Hilfsmittel bedient habe. Die Arbeit hat in dieser oder ähnlicher Form noch keiner anderen Prüfungsbehörde vorgelegen.
+\vspace*{1cm}
+
+Ilmenau, den 07.12.2015
+\vspace*{1cm}
+\begin{flushleft}
+\begin{minipage}[t]{6cm}
+................................\\
+Unterschrift
+\end{minipage}
+\end{flushleft}
+
+
+\end{normalsize}
+
+
+
+
+
+\end{document}
